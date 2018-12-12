@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Derrick Swart.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 def test_factor_sum():
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  DONE: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -44,7 +44,41 @@ def test_factor_sum():
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
+    # Test 1
+    expected = 11
+    answer = factor_sum(28)
+    print()
+    print('  expected:', expected)
+    print('calculated:', answer)
 
+    # Test 2
+    expected = 4
+    answer = factor_sum(25)
+    print()
+    print('  expected:', expected)
+    print('calculated:', answer)
+
+    # Test 3
+    expected = 7
+    answer = factor_sum(4)
+    print()
+    print('  expected:', expected)
+    print('calculated:', answer)
+
+    # Test 4
+    expected = 9
+    answer = factor_sum(10)
+    print()
+    print('  expected:', expected)
+    print('calculated:', answer)
+
+
+    # Test 1
+    expected = 0
+    answer = factor_sum(0)
+    print()
+    print('  expected:', expected)
+    print('calculated:', answer)
 
 def factor_sum(n):
     """
@@ -52,7 +86,7 @@ def factor_sum(n):
     returns the sum of the digits of the sum of the distinct factors of n,
     where a FACTOR of n is an integer that divides evenly into n.
 
-    For example, if n is 28, this function returns 11, because:
+                                        For example, if n is 28, this function returns 11, because:
       -- the distinct factors of n are:
              1  2  4  7  14  28
       -- and the sum of those numbers is   1 + 2 + 4 + 7 + 14 + 28,
@@ -60,7 +94,7 @@ def factor_sum(n):
       -- and the sum of the digits of 56 is 11,
     so this function returns 11 when n is 28.
 
-    As another example, if n is 25, this function returns 4, because:
+                              As another example, if n is 25, this function returns 4, because:
     -- the distinct factors of n are:
              1  5  25
       -- and the sum of those numbers is   1 + 5 + 25,
@@ -78,3 +112,4 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+main()
