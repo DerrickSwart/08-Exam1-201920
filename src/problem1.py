@@ -3,13 +3,13 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Derrick Swart.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 # -----------------------------------------------------------------------------
-# TODO: 2. Right-click on the  src  folder and
+# DONE: 2. Right-click on the  src  folder and
 #              Mark Directory as ... Sources Root,
 #          if you have not already done so.
 # -----------------------------------------------------------------------------
@@ -101,9 +101,25 @@ def problem1(square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # DONE: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    square
+    square.attach_to(window)
+    circle_dis_down = square.center.y + square.length_of_each_side
+    circle_x = square.center.x
+    circle = rg.Circle(rg.Point(circle_x, circle_dis_down), square.length_of_each_side/2)
+    circle.fill_color = square.fill_color
+    circle.outline_thickness = thickness
+    circle.attach_to(window)
+
+    top_point_x = square.center.x - (square.length_of_each_side/2)
+    top_point_y = square.center.y
+    line = rg.Line(rg.Point(circle.center.x, circle.center.y), rg.Point(top_point_x, top_point_y))
+    line.thickness = thickness
+    line.color = square.outline_color
+    line.attach_to(window)
+    window.render()
 
 
 # -----------------------------------------------------------------------------
